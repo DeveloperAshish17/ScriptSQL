@@ -1,0 +1,40 @@
+<div class="container-fluid p-2">
+    <div class="row g-1">
+        <div class="col-7">
+            <div class="card">
+                <h4 class="text-primary p-3">SQL Script</h4>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="card">
+                <!-- <button type="button" class="btn btn-primary openbtn" onclick="openNav()">☰ Toggle Sidepanel</button> -->
+                <h4 class="text-primary p-3">SQL Script Design</h4>
+                <p-tabView>
+                    <p-tabPanel header="Database">
+                        <button type="button" class="btn btn-info" (click)="onConnect()">Connect</button>
+                    </p-tabPanel>
+                    <p-tabPanel header="Columns">
+                        Content 2
+                    </p-tabPanel>
+                    <p-tabPanel header="Filters">
+                        Content 3
+                    </p-tabPanel>
+                    <p-tabPanel header="Sort">
+                        Content 3
+                    </p-tabPanel>
+                    <p-tabPanel header="Pivot">
+                        Content 3
+                    </p-tabPanel>
+                    <p-tabPanel header="Settings">
+                        Content 3
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<p-dialog header="Connect to Microsoft SQL Server" [(visible)]="display" [modal]="true" [style]="{width: '40vw'}" [maximizable]="true" [draggable]="true" [resizable]="false">
+    <app-database></app-database>
+</p-dialog>
